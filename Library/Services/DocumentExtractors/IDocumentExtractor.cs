@@ -5,6 +5,6 @@ namespace Library.Services.DocumentExtractors
 {
     public interface IDocumentExtractor
     {
-        List<string> GetRows(string documentPath, ICollection<string> stopWords = null, string[] skipWords = null, IPatternMatcher patternMatcher = null);
+        List<string> GetRows(string documentPath, ICollection<string> stopWords = null, string[] skipWords = null);
     }
 }

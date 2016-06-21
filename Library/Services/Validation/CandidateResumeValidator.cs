@@ -16,19 +16,23 @@ namespace Library.Services.Validation
         private IEnumerable<Lazy<IResumeValidator<Candidate>>> LazyValidators { get; set; }
 
         private readonly IEnumerable<IResumeValidator<Candidate>> _validators;
+
+        [Import]
+        private IRegexCompiler _regexCompiler;
+
         public CandidateResumeValidator()
         {
             MefDependencyBase.Container.SatisfyImportsOnce(this);
             _validators = LazyValidators.Select(l => l.Value);
         }
 
-        Candidate ICandidateBuilder.BuildFrom(List<string> dataRows, IRegexCompiler regexCompiler)
+        Candidate ICandidateBuilder.BuildFrom(List<string> dataRows)
         {
             var candidate = new Candidate();
 
             foreach (var resumeValidator in _validators)
             {
-                resumeValidator.Validate(candidate, dataRows, regexCompiler);
+                resumeValidator.Validate(candidate, dataRows, _regexCompiler);
             }
 
             return candidate;

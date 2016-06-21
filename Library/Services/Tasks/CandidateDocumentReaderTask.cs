@@ -30,9 +30,6 @@ namespace Library.Services.Tasks
         private IEmailManager _emailManager;
 
         [Import]
-        private IRegexCompiler _regexCompiler;
-
-        [Import]
         private IPatternMatcher _patternMatcher;
 
         public void Execute()
@@ -46,11 +43,11 @@ namespace Library.Services.Tasks
                 foreach (var attachment in email.InboundAttachments.TryGetValidCvsOrDefault(email.SenderName))
                 {
                     var documentExtractor = _documentExtractorFactory.GetExtractor(attachment.FileType);
-                    var parsedRows = documentExtractor.GetRows(attachment.FilePath, ResumeFilterHelper.GetStopWords(), ResumeFilterHelper.GetSkipWords(), _patternMatcher);
+                    var parsedRows = documentExtractor.GetRows(attachment.FilePath, ResumeFilterHelper.GetStopWords(), ResumeFilterHelper.GetSkipWords());
 
                     if (parsedRows.Count <= 0) continue;
 
-                    var candidate = _candidateBuilder.BuildFrom(parsedRows, _regexCompiler);
+                    var candidate = _candidateBuilder.BuildFrom(parsedRows);
 
                     if (candidate.IsValidCandidate())
                     {

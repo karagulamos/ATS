@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
 using Library.Core.Bootstrapper;
-using Library.Data;
 using Library.Services.Helper;
 using Library.Services.Logger;
 using Spire.Doc;
@@ -18,11 +17,15 @@ namespace Library.Services.DocumentExtractors
     {
         [Import]
         private ILoggerService _logger;
+
+        [Import]
+        private IPatternMatcher _patternMatcher;
+
         public WordDocumentExtractor()
         {
             MefDependencyBase.Container.SatisfyImportsOnce(this);
         }
-        public List<string> GetRows(string documentPath, ICollection<string> stopWords = null, string[] skipWords = null, IPatternMatcher patternMatcher = null)
+        public List<string> GetRows(string documentPath, ICollection<string> stopWords = null, string[] skipWords = null)
         {
             var memoryStream = new MemoryStream();
 
@@ -62,12 +65,12 @@ namespace Library.Services.DocumentExtractors
                         parsedLines.AddRange(page.Split('\n'));
                     }
 
-                    if (patternMatcher == null)
-                        patternMatcher = new NullPatternMatcher();
+                    if (_patternMatcher == null)
+                        _patternMatcher = new NullPatternMatcher();
 
                     if (stopWords != null)
                         parsedLines = parsedLines.TakeWhile(line => !stopWords.Any(line.Contains))
-                            .Union(patternMatcher.GetMatchedRows(parsedLines))
+                            .Union(_patternMatcher.GetMatchedRows(parsedLines))
                             .ToList();
 
                     _logger.Info(documentPath + " PDF stream successfully processed");
