@@ -21,7 +21,7 @@ namespace ATS.Web.Api.Controllers
     public class CandidateController : ApiController
     {
         [Import(RequiredCreationPolicy = CreationPolicy.NonShared)]
-        private ICandidateRepository _candidateRepository;
+        private ICandidateRepository _candidateRepository; 
 
         public CandidateController()
         {
