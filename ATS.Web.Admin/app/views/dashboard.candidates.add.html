@@ -1,0 +1,72 @@
+﻿<div class="row">
+    <div class="masonary-grids">
+        <div class="col-md-12">
+            <div class="widget-area">
+                <h2 class="widget-title"><strong>{{ vm.title }} APPLICANT DETAILS</strong>
+                </h2>
+                <!--<div ng-if="vm.success" class="green">
+                    <div ng-repeat="msg in vm.message"> {{ msg }}</div>
+                </div>-->
+
+                <div class="notification" ng-if="vm.showNotification">
+                    <div role="alert" class="alert color white">
+                        <span><i class="fa fa-{{ vm.class }}"></i></span>
+                        <div ng-repeat="msg in vm.message"> <h4> {{ msg }} </h4></div>
+                    </div>
+                </div>
+
+                <div class="wizard-form-h">
+                    <form class="col-md-6" name="candidateForm" novalidate role="form" ng-submit="vm.save(vm.candidate)">
+                        <input type="hidden" ng-model="vm.candidate.candidateId"/>
+
+                        <div class="inline-form">
+                            <label class="c-label">First Name</label>
+                            <input name="firstName" type="text" placeholder="First Name" ng-model="vm.candidate.firstName" required>
+                        </div>
+
+                        <div class="inline-form">
+                            <label class="c-label">Last Name</label>
+                            <input name="lastName" type="text" placeholder="Last Name" ng-model="vm.candidate.lastName" required>
+                        </div>
+
+                        <div class="inline-form">
+                            <label class="c-label">Age</label>
+                            <input name="age" type="text" placeholder="Age" ng-model="vm.candidate.age">
+                        </div>
+
+                        <div class="inline-form">
+                            <label class="c-label">Email</label>
+                            <input name="email" type="email" placeholder="Email" ng-model="vm.candidate.email" required>
+                        </div>
+
+                        <div class="inline-form">
+                            <label class="c-label">Phone Number</label>
+                            <input name="phoneNumber" type="text" placeholder="Phone" ng-model="vm.candidate.phoneNumber">
+                        </div>
+
+                        <div class="inline-form">
+                            <label class="c-label">State of Origin</label>
+                            <select name="stateOfOrigin" ng-model="vm.candidate.stateOfOrigin" ng-options="state for state in vm.states">
+                                <option value="">Select State</option>
+                            </select>
+                        </div>
+
+                        <div class="actionBar">
+                            <a class="btn c-btn large" style="margin-right: 5px; font-size: 15px; padding: 13px 21px;" ui-sref="dashboard.candidates">
+                                BACK
+                            </a>
+
+                            <button class="btn c-btn large green" type="submit" ng-disabled="candidateForm.$invalid" style="margin-right: 5px;">
+                                SUBMIT
+                                <span ng-show="vm.loading && candidateForm.$valid">
+                                <i class="fa fa-refresh fa-spin-custom"></i></span>
+                            </button>
+                        </div>
+
+                    </form>
+                    <div class="col-md-6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,150 @@
+﻿
+<script type="text/ng-template" id="searchModal.tmpl.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Enter your search... </h3>
+    </div>
+
+    <div class="wizard-form-h col-md-3">
+        <form name="searchForm">
+            <input type="hidden" ng-model="vm.candidate.candidateId" />
+
+            <div class="inline-form">
+                <label class="c-label">Name</label>
+                <input name="name" type="text" placeholder="Name" ng-model="vm.search.name">
+            </div>
+
+            <div class="inline-form">
+                <label class="c-label">Age</label>
+                <input style="width: 30%;" name="age" type="number" placeholder="Age" ng-model="vm.search.age">
+                <select style="width: 70%; border-left: solid;" name="direction" ng-model="vm.search.direction">
+                    <option value="eq">EQUAL</option>
+                    <option value="gt">GREATER</option>
+                    <option value="ge">GREATER OR EQUAL</option>
+                    <option value="lt">LESS THAN</option>
+                    <option value="le">LESS OR EQUAL</option>
+                    <option value="ne">NOT EQUAL</option>
+                </select>
+            </div>
+
+            <div class="inline-form">
+                <label class="c-label">Email</label>
+                <input name="email" type="email" placeholder="Email" ng-model="vm.search.email">
+            </div>
+
+            <div class="inline-form">
+                <label class="c-label">State of Origin</label>
+                <select style="border-left: solid;" name="state" ng-model="vm.search.state" ng-options="state for state in vm.states">
+                    <option value="">Select State</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <div class="actionBar">
+            <a ng-click="cancel()" class="btn c-btn large" style="margin-right: 5px; font-size: 15px; padding: 13px 21px;" ui-sref="dashboard.candidates">
+                CANCEL
+            </a>
+            <button ng-click="ok()" class="btn c-btn large green" type="submit" style="margin-right: 5px;">
+                SEARCH
+                <span ng-show="vm.loading">
+                    <i class="fa fa-refresh fa-spin-custom"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+</script>
+
+
+<div class="masonary-grids">
+    <div class="col-md-12">
+        <div class="widget-area">
+            <h2 class="widget-title">
+                <strong>APPLICANTS</strong>
+            </h2>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+                <div class=" notification" ng-if="vm.showNotification">
+                    <div role="alert" class="alert color white">
+                        <span><i class="fa fa-{{ vm.class }}"></i></span><strong>{{ vm.message }}</strong>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-md-2">
+                <div class="form-group">
+                    <label>Start Date</label>
+                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="date"/>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>End Date</label>
+                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="date"/>
+                </div>
+            </div>
+
+            <div class="col-md-3"></div>-->
+
+            <div class="col-md-4 col-sm-4 col-xs-4" style="top: 18px;">
+                <span class="pull-right">
+                    <a class="c-btn medium btn-warning" style="cursor: pointer;" ng-click="vm.open()"><i class="fa fa-search-plus"></i> Search </a>
+                    <a class="c-btn medium green" ng-click="vm.refresh()"><i class="fa fa-refresh {{ vm.isLoading ? 'fa-spin-custom' : '' }}"></i> Refresh </a>
+                </span>
+            </div>
+
+
+
+            <div class="table table-responsive">
+                <table class='table table-striped table-hover'>
+                    <thead class="table-head">
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Age</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>State</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody ng-cloak>
+                        <tr ng-repeat="candidate in vm.candidates | orderBy:'-dateModified' | limitTo: vm.pageSize">
+                            <td>{{(vm.currentPage - 1) * vm.pageSize + $index + 1 }}</td>
+                            <td>{{ candidate.firstName }}</td>
+                            <td>{{ candidate.lastName }}</td>
+                            <td>{{ candidate.age }}</td>
+                            <td>{{ candidate.email }}</td>
+                            <td>{{ candidate.phoneNumber }}</td>
+                            <td>{{ candidate.stateOfOrigin }}</td>
+
+                            <td style="width: 120px;">
+                                <span>
+                                    <a ui-sref="dashboard.candidatesEdit({candidateId : candidate.candidateId})" title="Edit Candidate Profile" class="c-btn medium blue"><i class="fa fa-edit"></i></a>
+                                    <a data-localize="DOWNLOAD" ng-click="vm.previewLink(candidate.candidateId)" class=" c-btn medium green" title="Preview Candidate CV"><i class="fa fa-file-text {{ vm.downloadingFile == candidate.candidateId ? 'fa-spin-custom' : '' }}"></i></a>
+                                    <a title="Delete Candidate Profile" confirmation-modal modal-text="Are you sure you want to delete this candidate?" confirm-click="vm.delete(candidate.candidateId)" class="c-btn medium red"><i class="fa fa-remove"></i></a>
+                                </span>
+                                <span></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-12">
+                <div uib-pagination total-items="vm.totalCount"
+                     num-pages="vm.totalPages"
+                     ng-model="vm.currentPage"
+                     max-size="vm.maxSize"
+                     ng-change="vm.refresh()"
+                     class="pagination-sm"
+                     boundary-links="true">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+

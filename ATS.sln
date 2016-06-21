@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{01AF448F-A609-49F1-BD2E-A5B875A4FC2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows", "Windows", "{C7CEED94-0D28-4936-AD11-5C6A8BDCB191}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{47F52500-5858-4DC4-BC4E-A17D2A20F43C}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATS.Desktop.Service", "ATS.Desktop.Service\ATS.Desktop.Service.csproj", "{983AFFCF-B438-40AE-870E-00F324A7A8AE}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ATS.Web.Admin", "http://localhost:55922", "{FB5DE1CA-E3F7-4BBD-9329-3FEF1035B54A}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55922"
+		Debug.AspNetCompiler.PhysicalPath = "ATS.Web.Admin\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55922\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55922"
+		Release.AspNetCompiler.PhysicalPath = "ATS.Web.Admin\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55922\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "ATS.Web.Admin\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATS.Web.Api", "ATS.Web.Api\ATS.Web.Api.csproj", "{38051598-D38B-42EE-ACFC-099AC91D525E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{41C39F54-A20B-4EE8-BA40-187287DB0EDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{1B4FB65F-48A2-4688-A9BF-220C064913CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{983AFFCF-B438-40AE-870E-00F324A7A8AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{983AFFCF-B438-40AE-870E-00F324A7A8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{983AFFCF-B438-40AE-870E-00F324A7A8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{983AFFCF-B438-40AE-870E-00F324A7A8AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB5DE1CA-E3F7-4BBD-9329-3FEF1035B54A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5DE1CA-E3F7-4BBD-9329-3FEF1035B54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB5DE1CA-E3F7-4BBD-9329-3FEF1035B54A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5DE1CA-E3F7-4BBD-9329-3FEF1035B54A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{38051598-D38B-42EE-ACFC-099AC91D525E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38051598-D38B-42EE-ACFC-099AC91D525E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38051598-D38B-42EE-ACFC-099AC91D525E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38051598-D38B-42EE-ACFC-099AC91D525E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C39F54-A20B-4EE8-BA40-187287DB0EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C39F54-A20B-4EE8-BA40-187287DB0EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C39F54-A20B-4EE8-BA40-187287DB0EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C39F54-A20B-4EE8-BA40-187287DB0EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{983AFFCF-B438-40AE-870E-00F324A7A8AE} = {C7CEED94-0D28-4936-AD11-5C6A8BDCB191}
+		{FB5DE1CA-E3F7-4BBD-9329-3FEF1035B54A} = {01AF448F-A609-49F1-BD2E-A5B875A4FC2D}
+		{38051598-D38B-42EE-ACFC-099AC91D525E} = {01AF448F-A609-49F1-BD2E-A5B875A4FC2D}
+		{41C39F54-A20B-4EE8-BA40-187287DB0EDB} = {1B4FB65F-48A2-4688-A9BF-220C064913CE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Web\ATS\API</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/ActiveUp.Net.Common.dll">
+      <publishTime>05/11/2016 22:45:57</publishTime>
+    </File>
+    <File Include="bin/ActiveUp.Net.Dns.dll">
+      <publishTime>05/11/2016 22:45:57</publishTime>
+    </File>
+    <File Include="bin/ActiveUp.Net.Imap4.dll">
+      <publishTime>05/11/2016 22:45:57</publishTime>
+    </File>
+    <File Include="bin/ATS.Web.Api.dll">
+      <publishTime>05/21/2016 13:57:07</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.OData.Core.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.OData.Edm.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/de/Microsoft.Spatial.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>05/11/2016 23:27:40</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>05/11/2016 23:27:40</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.OData.Core.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.OData.Edm.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/es/Microsoft.Spatial.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.OData.Core.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.OData.Edm.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.Spatial.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.OData.Core.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.OData.Edm.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/it/Microsoft.Spatial.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>05/13/2016 12:13:04</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.OData.Core.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.OData.Edm.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/ja/Microsoft.Spatial.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.OData.Core.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.OData.Edm.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/ko/Microsoft.Spatial.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/Library.dll">
+      <publishTime>05/21/2016 11:16:07</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>05/20/2016 21:34:25</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>05/12/2016 21:04:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>05/12/2016 21:04:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.OData.Core.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.OData.Edm.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Cors.dll">
+      <publishTime>05/15/2016 00:19:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>05/15/2016 00:19:32</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>05/15/2016 00:24:28</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>05/15/2016 00:22:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>05/15/2016 00:22:53</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Spatial.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/15/2016 01:16:19</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>05/15/2016 00:10:45</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.OData.Core.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.OData.Edm.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/ru/Microsoft.Spatial.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/Spire.Doc.dll">
+      <publishTime>05/16/2016 22:47:34</publishTime>
+    </File>
+    <File Include="bin/Spire.License.dll">
+      <publishTime>05/16/2016 22:47:34</publishTime>
+    </File>
+    <File Include="bin/Spire.Pdf.dll">
+      <publishTime>05/16/2016 22:47:34</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>05/15/2016 00:07:43</publishTime>
+    </File>
+    <File Include="bin/System.Threading.Tasks.Dataflow.dll">
+      <publishTime>05/18/2016 17:30:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>05/15/2016 00:12:53</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>05/15/2016 00:07:43</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Owin.dll">
+      <publishTime>05/15/2016 00:10:45</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>05/15/2016 00:07:43</publishTime>
+    </File>
+    <File Include="bin/System.Web.OData.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.OData.Core.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.OData.Edm.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/Microsoft.Spatial.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.OData.Core.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.OData.Edm.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="bin/zh-Hant/Microsoft.Spatial.resources.dll">
+      <publishTime>05/15/2016 12:13:20</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>05/15/2016 22:16:57</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/21/2016 13:57:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

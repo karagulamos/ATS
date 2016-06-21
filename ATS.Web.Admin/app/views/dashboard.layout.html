@@ -1,0 +1,79 @@
+﻿<div class="main" events-director>
+    <header class="header">
+        <div class="logo">
+            <a ui-sref="dashboard.index" title=""><img width="80" ng-src="/images/logos/{{vm.logo}}.jpg" alt="ATS Logo" /></a>
+            <a title="" class="toggle-menu"><i class="fa fa-bars"></i></a>
+        </div>
+
+        <div class="dropdown profile">
+            <a title="">
+                <i class="fa fa-user fa-3" style="width: 38px; height: 38px;"></i>Hello {{vm.thisUser.firstName}}<i class="caret"></i>
+            </a>
+            <div class="profile drop-list">
+                <ul>
+                    <li><a ng-click="vm.logOut()" title=""><i class="fa fa-power-off"></i> Logout</a></li>
+                </ul>
+            </div><!-- Profile DropDown -->
+        </div>
+    </header><!-- Header -->
+
+    <div class="page-container menu-left">
+        <aside class="sidebar">
+            <div class="profile-stats">
+                <div class="mini-profile" style="padding-left: 0px;">
+                    <h3>{{vm.thisUser.firstName}} {{vm.thisUser.lastName}}</h3>
+                    <h6 class="status online"><i></i> Online</h6>
+                    <a ng-click="vm.logOut()" title="Logout" class="logout red" data-toggle="tooltip" data-placement="right"><i class="fa fa-power-off"></i></a>
+                </div>
+                <div class="quick-stats">
+                    <h5>SUMMARY</h5>
+                    <ul>
+                        <li><span>{{vm.totalCandidates}}<i>Applicant{{vm.totalCandidates > 1 ? 's' : ''}}</i></span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu-sec">
+                <div id="menu-toogle" class="menus">
+
+                    <div class="single-menu">
+                        <h2>
+                            <a title=""><i class="fa fa-users"></i><span>Applications</span></a>
+                            <i class="blue">{{vm.totalCandidates}}</i>
+                        </h2>
+                        <div class="sub-menu">
+                            <ul>
+                                <li><a ui-sref="dashboard.candidates" title="">View Applicants</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>Powered by <a href="http://www.netrifik.com">NETRIFIK SOLUTIONS</a></p>
+            </div><!-- Menu Sec -->
+        </aside><!-- Aside Sidebar -->
+        <div class="content-sec">
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="#" title=""><i class="fa fa-home"></i></a>/</li>
+                    <li><a title="">Dashboard</a></li>
+                </ul>
+            </div><!-- breadcrumbs -->
+            <div class="container">
+                <div class="title-date-range">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="main-title">
+                                <h1 style="color: #fff">Dashboard</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                </div><!-- title Date Range -->
+                <div ui-view></div>
+
+            </div>
+        </div><!-- Content Sec -->
+
+    </div><!-- Page Container -->
+</div><!-- main -->

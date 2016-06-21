@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app.admin.portal">
+<head>
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal</title>
+
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,300,500,700,900' rel='stylesheet' type='text/css' />
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="content/font-awesome.css" type="text/css" /><!-- Font Awesome -->
+    <link rel="stylesheet" href="content/bootstrap.css" type="text/css" /><!-- Bootstrap -->
+    <link rel="stylesheet" href="content/style.css" type="text/css" /><!-- Style -->
+    <link rel="stylesheet" href="content/responsive.css" type="text/css" /><!-- Responsive -->
+    <link href="content/jquery-ui.min.css" rel="stylesheet" />
+    <link href="content/app.css" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <script src="scripts/angular.js"></script>
+
+    <!--[if lte IE 8]>
+        <script>
+            document.createElement('hello-world');
+            document.createElement('ng-include');
+            document.createElement('ng-pluralize');
+            document.createElement('ng-view');
+            // Optionally these for CSS
+            document.createElement('ng:include');
+            document.createElement('ng:pluralize');
+            document.createElement('ng:view');
+        </script>
+    <![endif]-->
+
+</head>
+<body ng-cloak>
+    <!-- <script src="//fast.appcues.com/16323.js"></script>-->
+
+    <div ui-view class="full-height"></div>
+
+    <!-- Library Scripts -->
+    <script type="text/javascript" src="scripts/jquery-1.11.1.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="scripts/angular-local-storage.js"></script>
+    <script type="text/javascript" src="scripts/angular-ui-router.js"></script>
+    <script type="text/javascript" src="scripts/angular-resource.js"></script>
+    <script type="text/javascript" src="scripts/ui-bootstrap-tpls-1.1.0.min.js"></script>
+    <script type="text/javascript" src="scripts/modernizr.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="scripts/enscroll.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/app.routes.js"></script>
+
+    <!-- Services -->
+    <script src="app/services/authInterceptor.js"></script>
+    <script src="app/services/authService.js"></script>
+    <script src="app/services/candidateService.js"></script>
+    <script src="app/services/adminService.js"></script>
+    <script src="app/services/dashboardService.js"></script>
+    <script src="app/services/common.js"></script>
+
+    <!-- Directives -->
+    <script src="app/directives/eventDirector.js"></script>
+    <script src="app/directives/dateWidget.js"></script>
+    <script src="app/directives/confirmationModal.js"></script>
+    <script src="app/directives/datePicker.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/controllers/main.js"></script>
+
+    <script src="app/controllers/login.js"></script>
+    <script src="app/controllers/login.forgotpassword.js"></script>
+
+    <script src="app/controllers/dashboard.js"></script>
+
+    <script src="app/controllers/candidates.js"></script>
+    <script src="app/controllers/candidates.add.js"></script>
+</body>
+</html>
