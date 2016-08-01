@@ -17,7 +17,7 @@ namespace Library.Data
         {
             try
             {
-                using (TC dbContext = new TC())
+                using (var dbContext = new TC())
                 {
                     dbContext.Entry(entity).State = EntityState.Added;
                     dbContext.SaveChanges();

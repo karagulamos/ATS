@@ -4,7 +4,7 @@ namespace Library.Services.DocumentExtractors
 {
     [Export(typeof(IDocumentExtractorFactory))]
     [PartCreationPolicy(CreationPolicy.Shared)]
-    class DocumentExtractorFactory : IDocumentExtractorFactory
+    internal class DocumentExtractorFactory : IDocumentExtractorFactory
     {
         private readonly IDocumentExtractor _pdfDocumentExtractor = new PdfDocumentExtractor();
         private readonly IDocumentExtractor _wordDocumentExtractor = new WordDocumentExtractor();
