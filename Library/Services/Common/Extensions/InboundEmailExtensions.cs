@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using ActiveUp.Net.Mail;
-using Library.Models;
+using Library.Core.Models;
 
 namespace Library.Services.Common.Extensions
 {

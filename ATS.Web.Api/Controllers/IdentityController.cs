@@ -3,7 +3,7 @@ using System.ComponentModel.Composition;
 using System.Web.Http;
 using ATS.Web.Api.Security;
 using Library.Core.Bootstrapper;
-using Library.Data;
+using Library.Core.Persistence.Repositories;
 using Microsoft.AspNet.Identity;
 
 namespace ATS.Web.Api.Controllers

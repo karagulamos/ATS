@@ -12,6 +12,7 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using Library.Core.Bootstrapper;
 using Library.Core.Messaging.Settings;
+using Library.Services.Messaging;
 
 namespace Library.Core.Messaging.Infrastructure
 {

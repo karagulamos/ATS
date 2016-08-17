@@ -1,5 +1,4 @@
 ﻿using System.ServiceProcess;
-using System.Threading;
 
 namespace ATS.Desktop.Service
 {

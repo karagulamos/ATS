@@ -4,7 +4,7 @@ using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Library.Core.Bootstrapper;
-using Library.Models;
+using Library.Core.Models;
 using Library.Services.Common.Extensions;
 using Library.Services.Helper;
 

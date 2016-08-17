@@ -3,8 +3,8 @@ using System.ComponentModel.Composition;
 using System.IO;
 using System.Net.Mail;
 using Library.Core.Bootstrapper;
-using Library.Data;
-using Library.Data.Common;
+using Library.Core.Common;
+using Library.Core.Persistence.Repositories;
 using Library.Services.Tasks.Config;
 using Attachment = System.Net.Mail.Attachment;
 

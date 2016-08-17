@@ -2,7 +2,7 @@
 using System.ComponentModel.Composition;
 using System.Linq;
 using System.Threading.Tasks;
-using Library.Data;
+using Library.Persistence;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ActiveUp.Net.Mail;
 using Library.Core.Messaging.Settings;
+using Library.Services.Messaging;
 
 namespace Library.Core.Messaging.Infrastructure
 {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Library.Models;
+using Library.Core.Models;
 using Library.Services.Helper;
 
 namespace Library.Services.Validation

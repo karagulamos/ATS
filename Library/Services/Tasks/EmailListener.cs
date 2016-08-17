@@ -6,8 +6,8 @@ using System.Linq;
 using Library.Core.Bootstrapper;
 using Library.Core.Messaging.Infrastructure;
 using Library.Core.Messaging.Settings;
-using Library.Data;
-using Library.Models;
+using Library.Core.Models;
+using Library.Core.Persistence.Repositories;
 using Library.Services.Common.Extensions;
 
 namespace Library.Services.Tasks

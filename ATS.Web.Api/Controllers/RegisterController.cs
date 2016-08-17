@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using ATS.Web.Api.Security;
 using Library.Core.Bootstrapper;
-using Library.Data;
+using Library.Persistence;
 
 namespace ATS.Web.Api.Controllers
 {

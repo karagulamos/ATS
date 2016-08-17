@@ -1,5 +1,5 @@
 using System.Net.Mail;
-using Library.Data;
+using Library.Core.Persistence.Repositories;
 
 namespace Library.Services.Tasks.Config
 {

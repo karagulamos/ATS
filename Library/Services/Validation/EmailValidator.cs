@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using Library.Core.Bootstrapper;
-using Library.Models;
+using Library.Core.Models;
 using Library.Services.Helper;
 
 namespace Library.Services.Validation

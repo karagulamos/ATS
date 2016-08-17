@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Library.Core.Messaging.Settings;
+using Library.Services.Messaging;
 
 namespace Library.Core.Messaging.Infrastructure
 {

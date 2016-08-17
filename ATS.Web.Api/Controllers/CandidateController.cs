@@ -10,8 +10,8 @@ using System.Web.OData;
 using System.Web.OData.Extensions;
 using System.Web.OData.Query;
 using Library.Core.Bootstrapper;
-using Library.Data;
-using Library.Models;
+using Library.Core.Models;
+using Library.Core.Persistence.Repositories;
 using Library.Services.Helper;
 
 namespace ATS.Web.Api.Controllers

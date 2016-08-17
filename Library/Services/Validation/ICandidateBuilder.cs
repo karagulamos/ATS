@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
-using Library.Models;
-using Library.Services.Helper;
+using Library.Core.Models;
 
 namespace Library.Services.Validation
 {
