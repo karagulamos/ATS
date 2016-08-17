@@ -64,9 +64,6 @@
       <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="Spire.Doc, Version=5.5.0.54040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
       <HintPath>..\packages\FreeSpire.Doc.5.5\lib\net40\Spire.Doc.dll</HintPath>
       <Private>True</Private>
@@ -89,7 +86,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -128,6 +124,7 @@
     <Compile Include="Core\Models\OutboundImage.cs" />
     <Compile Include="Core\Models\OutboundRecipient.cs" />
     <Compile Include="Core\Models\SmtpDetail.cs" />
+    <Compile Include="Core\Persistence\IAtsDbContext.cs" />
     <Compile Include="Core\Persistence\Repositories\ICandidateRepository.cs" />
     <Compile Include="Core\Persistence\Repositories\IDataManager.cs" />
     <Compile Include="Core\Persistence\Repositories\IDataRepository.cs" />

@@ -1,10 +1,11 @@
 ﻿using System.Data.Entity;
 using Library.Core.Models;
+using Library.Core.Persistence;
 using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Library.Persistence
 {
-    public class AtsDbContext : IdentityDbContext<AppUser>
+    public class AtsDbContext : IdentityDbContext<AppUser>, IAtsDbContext
     {
         public AtsDbContext() : base("ATS")
         {
