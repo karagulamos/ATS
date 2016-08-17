@@ -25,7 +25,7 @@ namespace ATS.Web.Api.Controllers
 
         public CandidateController()
         {
-            MefDependencyBase.Container.SatisfyImportsOnce(this);  // import
+            MefDependencyBase.Container.SatisfyImportsOnce(this);  // imports
         }
 
         [Route("query")]
