@@ -12,11 +12,11 @@ namespace ATS.Desktop.Service
         {
            
 #if DEBUG
-            var mailpayService = new AtsDesktopService();
-            mailpayService.OnDebug();
+            var atsDesktopService = new AtsDesktopService();
+            atsDesktopService.OnDebug();
             Thread.Sleep(Timeout.Infinite);
 #else
-             var servicesToRun = new ServiceBase[] 
+            var servicesToRun = new ServiceBase[] 
             { 
                 new AtsDesktopService() 
             };
