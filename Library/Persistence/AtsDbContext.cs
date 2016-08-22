@@ -5,7 +5,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Library.Persistence
 {
-    public class AtsDbContext : IdentityDbContext<AppUser>, IAtsDbContext
+    public class AtsDbContext : IdentityDbContext<AppUser>, IAtsDbContext // comment
     {
         public AtsDbContext() : base("ATS")
         {
