@@ -18,7 +18,7 @@ namespace Library.Persistence.Repositories
         public IList<OutboundEmailDetail> GetOutboundEmailDetails()
         {
 
-            using (var dbContext = new AtsDbContext())
+            using (var dbContext = CreateDataContext())
             {
                 var maxAttempts = Convert.ToInt32(ConfigurationManager.AppSettings["MaxEmailAttempts"]);
                 var outboundHost = ConfigurationManager.AppSettings["SmtpServer"];

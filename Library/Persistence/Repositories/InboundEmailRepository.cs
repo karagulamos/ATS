@@ -13,7 +13,7 @@ namespace Library.Persistence.Repositories
     {
         public IList<InboundEmail> GetUnprocessedInboundEmails(int batchCount)
         {
-            using (var dbContext = new AtsDbContext())
+            using (var dbContext = CreateDataContext())
             {
                 var emails = from email in dbContext.InboundEmails 
                              where email.Processed == 0
@@ -28,7 +28,7 @@ namespace Library.Persistence.Repositories
 
         public bool IsEmailProcessed(int emailId)
         {
-            using (var dbContext = new AtsDbContext())
+            using (var dbContext = CreateDataContext())
             {
                 return dbContext.InboundEmails.Any(e => e.InboundEmailId == emailId && e.Processed == 1);
             }

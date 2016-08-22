@@ -12,6 +12,9 @@ namespace Library.Persistence
         where T : class
         where TC : DbContext, new()
     {
+
+        protected TC CreateDataContext() { return new TC(); }
+
         public virtual T Save(T entity)
         {
             try
@@ -39,7 +42,7 @@ namespace Library.Persistence
                     }
                 }
 
-                throw new DbEntityValidationException(outputLines.ToString());  
+                throw new DbEntityValidationException(outputLines.ToString());
             }
         }
 
@@ -111,7 +114,7 @@ namespace Library.Persistence
                 return dbContext.Set<T>().ToList();
             }
         }
-    
+
         public IEnumerable<T> DbFilter(Expression<Func<T, bool>> filter)
         {
             using (TC dbContext = new TC())

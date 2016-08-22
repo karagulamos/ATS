@@ -13,7 +13,7 @@ namespace Library.Persistence.Repositories
 
         public InboundAttachment[] GetUnprocessedAttachments(int batchCount)
         {
-            using (var dbContext = new AtsDbContext())
+            using (var dbContext = CreateDataContext())
             {
                 var attachments = from attachment in dbContext.InboundAttachments
                               join email in dbContext.InboundEmails on attachment.InboundEmailId equals email.InboundEmailId
@@ -28,7 +28,7 @@ namespace Library.Persistence.Repositories
         }
         public bool VerifyInboundEmailHasAttachment(int? emailId)
         {
-            using (var dbContext = new AtsDbContext())
+            using (var dbContext = CreateDataContext())
             {
                 return dbContext.InboundAttachments.Any(a => a.InboundEmailId == emailId);
             }

@@ -14,7 +14,7 @@ namespace Library.Persistence.Repositories
     {
         public IEnumerable<T> GetImapSettings<T>(Expression<Func<SmtpDetail, T>> action)
         {
-            using (var dbContext = new AtsDbContext())
+            using (var dbContext = CreateDataContext())
             {
                 return dbContext.SmtpDetails.Select(action).ToArray();
             }

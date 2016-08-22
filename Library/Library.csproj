@@ -126,7 +126,6 @@
     <Compile Include="Core\Models\SmtpDetail.cs" />
     <Compile Include="Core\Persistence\IAtsDbContext.cs" />
     <Compile Include="Core\Persistence\Repositories\ICandidateRepository.cs" />
-    <Compile Include="Core\Persistence\Repositories\IDataManager.cs" />
     <Compile Include="Core\Persistence\Repositories\IDataRepository.cs" />
     <Compile Include="Core\Persistence\Repositories\IDataRepositoryFactory.cs" />
     <Compile Include="Core\Persistence\Repositories\IInboundAttachmentsRepository.cs" />

@@ -12,7 +12,7 @@ namespace Library.Persistence.Repositories
     {
         public List<string> GetOperationsAdminEmails()
         {
-            using (var context = new AtsDbContext())
+            using (var context = CreateDataContext())
             {
                 var emails = 
                     from admin in context.OperationsAdmins
