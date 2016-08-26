@@ -4,10 +4,11 @@
     var app = angular.module("app.admin.portal");
 
     app.constant("appSettings", {
-        apiEndpoint: "http://localhost:55931"
+        //apiEndpoint: "http://localhost:55931"
+        apiEndpoint: "http://52.42.246.178:8080"
     });
 
-    app.config(function ($httpProvider) {
+    app.config(function ($httpProvider) { 
         $httpProvider.interceptors.push('authInterceptor');
     });
 
