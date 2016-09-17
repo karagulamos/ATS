@@ -22,7 +22,7 @@ namespace Library.Services.Helper
         private const string FirstLineContainingNameRegexPattern = @"(?=\s*[a-z])(^\s*([a-z\- ]+[,]?\s+[a-z\- ]+)\s*$)";
         private const string CandidateNameRegexPattern = @"^\s*name[^\w\d]+?([\w\s-',]+)";
 
-        private const string PhoneNumberRegexPattern = 
+        private const string PhoneNumberRegexPattern =
 @"(\+?234[ ]*[7-9]\d{9}|\s*0\s*[7-9]\d{9}|\+?234\s*[\(\-]\s*0?\s*[\-\)]?\s*[7-9]\d{9}|\s*\+?234\s*[-.( ]?\s*0?\d{3}\s*[-.) ]?\s*\d{3}\s*[-.( ]?\s*\d{4}|\s*0?\d{3}\s*[-.) ]?\s*\d{3}\s*[-. ]?\s*\d{4})";
 
         //private const string StatOfOriginRegexPattern = @"^\s*(origin.*|state|state.*origin|place.*birth|birth.*place|nationality)[^\w\d]*([a-z-\s]+)\s*$";
