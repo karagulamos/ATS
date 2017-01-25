@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Library.Core.Bootstrapper;
+using Microsoft.Owin.Security.OAuth;
+using System;
 using System.ComponentModel.Composition;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Library.Core.Bootstrapper;
-using Microsoft.Owin.Security.OAuth;
 
 namespace ATS.Web.Api.Security
 {

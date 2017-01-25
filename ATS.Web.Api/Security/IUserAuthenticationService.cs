@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Library.Persistence;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using Library.Persistence;
 
 namespace ATS.Web.Api.Security
 {
