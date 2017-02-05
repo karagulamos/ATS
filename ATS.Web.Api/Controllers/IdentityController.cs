@@ -1,10 +1,11 @@
-﻿using System;
-using System.ComponentModel.Composition;
-using System.Web.Http;
-using ATS.Web.Api.Security;
+﻿using ATS.Web.Api.Security;
 using Library.Core.Bootstrapper;
 using Library.Core.Persistence.Repositories;
 using Microsoft.AspNet.Identity;
+using System;
+using System.ComponentModel.Composition;
+using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace ATS.Web.Api.Controllers
 {
@@ -13,7 +14,7 @@ namespace ATS.Web.Api.Controllers
     public class IdentityController : ApiController
     {
         [Import(RequiredCreationPolicy = CreationPolicy.NonShared)]
-        IUserAuthenticationService _userAuthenticationService;
+        IUserService _userAuthenticationService;
 
         [Import(RequiredCreationPolicy = CreationPolicy.NonShared)]
         private ICandidateRepository _candidateRepository;
@@ -25,15 +26,15 @@ namespace ATS.Web.Api.Controllers
 
         [Route("details")]
         [HttpGet]
-        public IHttpActionResult Get()
+        public async Task<IHttpActionResult> Get()
         {
             try
             {
                 return Ok(new
-                 {
-                     CurrentUser = _userAuthenticationService.GetCurrentUserDetails(User.Identity.GetUserId()),
-                     TotalCandidates = _candidateRepository.GetDataCount()
-                 });
+                {
+                    CurrentUser = await _userAuthenticationService.GetCurrentUserDetailsAsync(User.Identity.GetUserId()),
+                    TotalCandidates = _candidateRepository.GetDataCount()
+                });
             }
             catch (Exception ex)
             {

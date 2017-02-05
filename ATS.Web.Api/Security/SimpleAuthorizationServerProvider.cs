@@ -10,7 +10,7 @@ namespace ATS.Web.Api.Security
     public class SimpleAuthorizationServerProvider : OAuthAuthorizationServerProvider
     {
         [Import(RequiredCreationPolicy = CreationPolicy.NonShared)]
-        private IUserAuthenticationService _userAuthenticationService;
+        private IUserService _userAuthenticationService;
 
         public SimpleAuthorizationServerProvider()
         {
@@ -19,14 +19,14 @@ namespace ATS.Web.Api.Security
 
         public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
         {
-            context.Validated();
+            await Task.FromResult(context.Validated());
         }
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
             try
             {
-                if (!_userAuthenticationService.ValidateUserCredentials(context.UserName, context.Password))
+                if (!await _userAuthenticationService.ValidateUserCredentialsAsync(context.UserName, context.Password))
                 {
                     context.SetError("invalid_grant", "The user name or password is incorrect.");
                     return;
@@ -36,9 +36,9 @@ namespace ATS.Web.Api.Security
                 identity.AddClaim(new Claim("sub", context.UserName));
                 identity.AddClaim(new Claim(ClaimTypes.Email, context.UserName));
                 identity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
-                identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, _userAuthenticationService.GetUserId(context.UserName)));
+                identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, await _userAuthenticationService.GetUserIdAsync(context.UserName)));
 
-                foreach (var role in _userAuthenticationService.GetUserRoles(context.UserName))
+                foreach (var role in await _userAuthenticationService.GetUserRolesAsync(context.UserName))
                 {
                     identity.AddClaim(new Claim(ClaimTypes.Role, role));
                 }

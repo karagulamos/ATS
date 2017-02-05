@@ -21,6 +21,7 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -163,8 +164,9 @@
     <Compile Include="Controllers\IdentityController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Security\AtsUserAuthenticationService.cs" />
-    <Compile Include="Security\IUserAuthenticationService.cs" />
+    <Compile Include="Security\AtsUserService.cs" />
+    <Compile Include="Security\LoggedOnUser.cs" />
+    <Compile Include="Security\IUserService.cs" />
     <Compile Include="Security\SimpleAuthorizationServerProvider.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
